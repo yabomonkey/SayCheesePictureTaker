@@ -26,7 +26,7 @@
     <string name="cameraSelectedLabelText">Camera to be used:</string>
     <string name="smileConfidenceLabelText">Minimum Smile Detected:</string>
     <string name="about_button_alt">About</string>
-    <string name="about_dialog">This app is used to take pictures of smiling people. It will only take a picture if everyone is smiling. \n\n Set your preferences and then start taking pictures! \n\n Created by Daniel Ellis</string>
+    <string name="about_dialog">This app is used to take pictures of smiling people. It will only take a picture if everyone is smiling. \n\nSet your preferences and then start taking pictures! \n\nCreated by Daniel Ellis \nVersion 1.1</string>
     <string name="about_title">About this app</string>
 
     <string name="java_entry_title" translatable="false">Run the ML Kit quickstart written in Java</string>
