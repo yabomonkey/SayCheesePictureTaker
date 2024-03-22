@@ -181,7 +181,7 @@ class MainActivity : BaseActivity() {
                 .setTitle(getString(R.string.about_title))
                 .setMessage(getString(R.string.about_dialog))
                 .setIcon(android.R.drawable.ic_menu_camera)
-                .setNeutralButton(android.R.string.yes, null)
+                .setNeutralButton(android.R.string.ok, null)
                 .create().showImmersive()
             true
         } else {
