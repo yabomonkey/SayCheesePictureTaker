@@ -37,8 +37,7 @@ class OpenSmileOverlayActivity : AppCompatActivity()  {
         cameraSelector = CameraSelector.Builder().requireLensFacing(CameraSelector.LENS_FACING_FRONT).build()
         setContentView(viewBinding.root)
 
-        ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application))
-            .get(CameraXViewModel::class.java)
+        ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application))[CameraXViewModel::class.java]
             .processCameraProvider
             .observe(this) { provider: ProcessCameraProvider? ->
                 cameraProvider = provider
