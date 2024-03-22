@@ -8,6 +8,7 @@ import android.os.Looper
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
@@ -139,6 +140,7 @@ class OpenShutterActivity : AppCompatActivity() {
         sysTimer.cancel()
     }
 
+    @RequiresApi(Build.VERSION_CODES.Q)
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         if (handler.hasCallbacks(updateDelayTimer)){
