@@ -1,8 +1,6 @@
 package yabomonkey.example.saycheesepicturetaker
 
-import android.os.Build
 import android.view.View
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 
 private val TAG = "BaseActivity"
@@ -16,7 +14,6 @@ internal const val IMMERSIVE_FLAG_TIMEOUT = 500L
 
 open class BaseActivity : AppCompatActivity() {
 
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     internal fun activateToolbar(enableHome: Boolean) {
         val toolbar = findViewById<View>(R.id.toolbar) as androidx.appcompat.widget.Toolbar
         setSupportActionBar(toolbar)

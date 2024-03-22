@@ -18,11 +18,9 @@ package yabomonkey.example.saycheesepicturetaker.utils.smileoverlay.smiledetecto
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.Build.VERSION_CODES;
 import android.preference.PreferenceManager;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.camera.core.CameraSelector;
 
 import com.google.common.base.Preconditions;
@@ -32,7 +30,6 @@ import yabomonkey.example.saycheesepicturetaker.R;
 /** Utility class to retrieve shared preferences. */
 public class PreferenceUtils {
 
-  @RequiresApi(VERSION_CODES.LOLLIPOP)
   @Nullable
   public static android.util.Size getCameraXTargetResolution(Context context, int lensfacing) {
     Preconditions.checkArgument(

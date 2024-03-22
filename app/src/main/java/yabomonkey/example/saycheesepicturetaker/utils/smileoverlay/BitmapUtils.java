@@ -16,7 +16,6 @@
 
 package yabomonkey.example.saycheesepicturetaker.utils.smileoverlay;
 
-import android.annotation.TargetApi;
 import android.content.ContentResolver;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -27,12 +26,10 @@ import android.graphics.YuvImage;
 import android.media.Image;
 import android.media.Image.Plane;
 import android.net.Uri;
-import android.os.Build.VERSION_CODES;
 import android.provider.MediaStore;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.camera.core.ExperimentalGetImage;
 import androidx.camera.core.ImageProxy;
 import androidx.exifinterface.media.ExifInterface;
@@ -70,7 +67,6 @@ public class BitmapUtils {
   }
 
   /** Converts a YUV_420_888 image from CameraX API to a bitmap. */
-  @RequiresApi(VERSION_CODES.LOLLIPOP)
   @Nullable
   @ExperimentalGetImage
   public static Bitmap getBitmap(ImageProxy image) {
@@ -194,7 +190,6 @@ public class BitmapUtils {
    * before the U buffer and the planes have a pixelStride of 2. If this is case, we can just copy
    * them to the NV21 array.
    */
-  @RequiresApi(VERSION_CODES.KITKAT)
   private static ByteBuffer yuv420ThreePlanesToNV21(
       Plane[] yuv420888planes, int width, int height) {
     int imageSize = width * height;
@@ -224,7 +219,6 @@ public class BitmapUtils {
   }
 
   /** Checks if the UV plane buffers of a YUV_420_888 image are in the NV21 format. */
-  @RequiresApi(VERSION_CODES.KITKAT)
   private static boolean areUVPlanesNV21(Plane[] planes, int width, int height) {
     int imageSize = width * height;
 
@@ -257,7 +251,6 @@ public class BitmapUtils {
    * <p>The input plane data will be copied in 'out', starting at 'offset' and every pixel will be
    * spaced by 'pixelStride'. Note that there is no row padding on the output.
    */
-  @TargetApi(VERSION_CODES.KITKAT)
   private static void unpackPlane(
       Plane plane, int width, int height, byte[] out, int offset, int pixelStride) {
     ByteBuffer buffer = plane.getBuffer();

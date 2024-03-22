@@ -1,8 +1,6 @@
 package yabomonkey.example.saycheesepicturetaker.utils
 
-import android.os.Build
 import android.util.Log
-import androidx.annotation.RequiresApi
 import androidx.camera.core.ExperimentalGetImage
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
@@ -19,7 +17,6 @@ typealias SmileListener = (smiling: Boolean) -> Unit
 class SmileAnalyzer(private val smilePercentage: Int, private val listener: SmileListener? = null) : ImageAnalysis.Analyzer {
 
     @Override
-    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     @ExperimentalGetImage
     override fun analyze(imageProxy: ImageProxy) {
         val realTimeOpts = FaceDetectorOptions.Builder()

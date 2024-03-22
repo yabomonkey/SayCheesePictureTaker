@@ -16,11 +16,9 @@
 
 package yabomonkey.example.saycheesepicturetaker.utils
 
-import android.os.Build
 import android.view.DisplayCutout
 import android.view.View
 import android.view.WindowManager
-import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 
 /** Combination of all flags required to put activity into immersive mode */
@@ -33,7 +31,6 @@ const val FLAGS_FULLSCREEN =
             View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
 
 /** Pad this view with the insets provided by the device cutout (i.e. notch) */
-@RequiresApi(Build.VERSION_CODES.P)
 fun View.padWithDisplayCutout() {
 
     /** Helper method that applies padding from cutout's safe insets */
