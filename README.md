@@ -15,7 +15,7 @@ Open the Android project file in Android Studio. Then clean, build and run on a 
 3. Use the 'Play' (>) button to launch the app on a device
 
 ## Installing & Deployment
-2. You must connect a Developer Mode enabled Android device via USB cable to your computer and run the app on the device.
+1. You must connect a Developer Mode enabled Android device via USB cable to your computer and run the app on the device.
 
 ## Usage
 
