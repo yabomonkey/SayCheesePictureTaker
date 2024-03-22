@@ -3,7 +3,6 @@ package yabomonkey.example.saycheesepicturetaker
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
-private val TAG = "BaseActivity"
 internal const val  DELAY_LENGTH = "DELAY_LENGTH"
 internal const val  EXPOSURE_LENGTH = "EXPOSURE_LENGTH"
 internal const val  SELECTED_CAMERA = "SELECTED_CAMERA"

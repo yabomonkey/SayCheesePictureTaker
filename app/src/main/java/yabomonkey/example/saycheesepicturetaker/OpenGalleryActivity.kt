@@ -18,8 +18,6 @@ import yabomonkey.example.saycheesepicturetaker.utils.showImmersive
 import java.io.File
 import java.util.*
 
-private const val TAG = "OpenGalleryActivity"
-
 class OpenGalleryActivity : AppCompatActivity() {
 
     /** Adapter class used to present a fragment containing one photo or video as a page */
